@@ -22,6 +22,7 @@ No Django, uma app é uma parte do projeto que realiza uma função específica.
 
 As apps ajudam a dividir o projeto em partes menores e gerenciáveis. Uma app pode ser reutilizada em diferentes projetos. Com as apps, o código do projeto é mais organizado. Cada app tem a sua própria lógica e dados.
 
+```
 nome_da_app/
     ├── __init__.py        # Indica que este diretório é um pacote Python
     ├── admin.py           # Configurações para o painel de administração
@@ -31,3 +32,4 @@ nome_da_app/
     ├── models.py          # Modelos da app (estrutura dos dados)
     ├── tests.py           # Testes para a app
     └── views.py           # Lógica de visualização da app
+```
