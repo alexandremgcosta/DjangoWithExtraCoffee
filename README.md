@@ -33,3 +33,21 @@ nome_da_app/
     ├── tests.py           # Testes para a app
     └── views.py           # Lógica de visualização da app
 ```
+
+---
+
+## Definições
+
+### URLs
+
+URLs são responsáveis por mapear endereços web a funções ou vistas no backend. Basicamente, quando um utilizador acede a uma página, o URL indica ao Django qual código deve ser executado para gerar a resposta certa.
+
+### Views
+
+As Views em Django são funções ou classes que processam pedidos (requests) dos utilizadores e devolvem respostas. Elas atuam como intermediárias entre os dados (do modelo) e o que o utilizador vê (templates). Basicamente, uma view recebe o pedido, processa os dados e devolve uma página web ou outro tipo de resposta, como JSON ou ficheiros.
+
+### Organização de URLs e Views
+
+Ao desenvolver aplicações com Django, a organização das URLs e Views desempenha um papel fundamental na forma como os pedidos dos utilizadores são tratados. Quando um utilizador acede a uma página da aplicação, o URL correspondente define qual o código que deve ser executado no backend.
+
+Cada app pode ter o seu próprio ficheiro urls.py. Facilita a leitura e a gestão do código à medida que a aplicação cresce.
