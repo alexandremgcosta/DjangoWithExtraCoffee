@@ -51,3 +51,23 @@ As Views em Django são funções ou classes que processam pedidos (requests) do
 Ao desenvolver aplicações com Django, a organização das URLs e Views desempenha um papel fundamental na forma como os pedidos dos utilizadores são tratados. Quando um utilizador acede a uma página da aplicação, o URL correspondente define qual o código que deve ser executado no backend.
 
 Cada app pode ter o seu próprio ficheiro urls.py. Facilita a leitura e a gestão do código à medida que a aplicação cresce.
+
+### URLs Dinâmicas no Django
+
+O Django permite a criação de URLs dinâmicas, que capturam partes da URL e as utilizam como parâmetros dentro das views. Isso possibilita que URLs sejam mais flexíveis e daptáveis a diferentes valores, sem a necessidade de criar uma rota separada para cada possível caminho.
+
+```
+urlpatterns = [
+    path("<parameter>", views.example_view)
+]
+```
+
+### Função reverse e URLs nomeados no Django
+
+**Named URLs:** O Django oferece a capacidade de atribuir nomes às suas URLs. Se a URL mudar no futuro, só é necessário alterar o urlpatterns, e todas as referências no projeto continuam a funcionar corretamente.
+
+Por exemplo: ```path("<str:month>", views.monthly_challenge, name="month-challenge")``
+
+Agora, em vez de referenciar diretamente a URL /challenge/<month>, podemos usar o nome "month-challenge" em todo o projeto.
+
+**Função reverse:** Permite gerar URLs com base nesses nomes. Em vez de construir manualmente a URL, cria automaticamente a URL correta.
